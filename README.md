@@ -47,6 +47,19 @@ cd python-iot-raspberry-pi
 sudo pip install -r requirements.txt
 ```
 
+The client requires a file ```/home/pi/device.cfg``` to exist.
+The org, auth-key, auth-token can be generated at https://internetofthings.ibmcloud.com/dashboard.  Click on API keys to generate one.
+
+The file should look like the following
+```
+[application]
+org=youriotorg
+id=yourdeviceid
+auth-method=apikey
+auth-key=yourapikey
+auth-token=yourapitoken
+```
+
 License
 ================================================================================
 
