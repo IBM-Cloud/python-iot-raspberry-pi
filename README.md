@@ -10,27 +10,6 @@ in the web UI in Bluemix it will turn a LED on/off.  If you press the button
 it will send a text message using Twilio to the phone number and message you
 type in the web ui.
 
-
-
-To Use (Server Side)
-================================================================================
-
-```
-cf create-service iotf-service iotf-service-free iot-python
-#replace the phone number with a phone number you registered with twilio
-cf set-env python-iot-hackathon PHONE_NUMBER_FROM "+19192006462"
-#replace the device ID with the device id of your raspberry pi
-#you can get it by running service iot getdeviceid on your raspberry pi
-cf set-env python-iot-hackathon DEVICE_ID "b827eb36267d"
-cf push myappname
-```
-
-Replace myapp name with the name of your app (ex. python-raspberry-pi)
-
-or click the button below
-
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Bluemix/python-iot-raspberry-pi.git)
-
 To Use (Client Side - Raspberry Pi)
 ================================================================================
 
@@ -59,6 +38,25 @@ auth-method=apikey
 auth-key=yourapikey
 auth-token=yourapitoken
 ```
+
+To Use (Server Side)
+================================================================================
+
+```
+cf create-service iotf-service iotf-service-free iot-python
+#replace the phone number with a phone number you registered with twilio
+cf set-env python-iot-hackathon PHONE_NUMBER_FROM "+19192006462"
+#replace the device ID with the device id of your raspberry pi
+#you can get it by running service iot getdeviceid on your raspberry pi
+cf set-env python-iot-hackathon DEVICE_ID "b827eb36267d"
+cf push myappname
+```
+
+Replace myapp name with the name of your app (ex. python-raspberry-pi)
+
+or click the button below
+
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Bluemix/python-iot-raspberry-pi.git)
 
 License
 ================================================================================
