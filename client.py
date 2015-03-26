@@ -23,7 +23,6 @@ try:
     options = ibmiotf.application.ParseConfigFile("/home/pi/device.cfg")
     options["deviceId"] = options["id"]
     options["id"] = "aaa" + options["id"]
-    print options
     client = ibmiotf.application.Client(options)
     client.connect()
     client.deviceEventCallback = myCommandCallback

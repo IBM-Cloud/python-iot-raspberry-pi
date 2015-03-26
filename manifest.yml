@@ -4,4 +4,4 @@ applications:
   memory: 128M
   services:
    - iot-python
-   - twilio
+   - iot-twilio
