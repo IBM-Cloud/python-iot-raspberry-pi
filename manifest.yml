@@ -1,4 +1,7 @@
 ---
 applications:
-- name: hello-world-flask
+- name: python-iot-hackathon
   memory: 128M
+  services:
+   - iot-python
+   - twilio

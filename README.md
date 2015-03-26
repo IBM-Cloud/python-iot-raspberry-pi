@@ -1,8 +1,14 @@
-Hello World in Python on Cloud Foundry using Flask
+Python app to demonstrate using inputs and outputs on a Raspberry Pi
 ================================================================================
 
-This is a sample application showing how to deploy a simple hello world app
-using Cloud Foundry and the Python build pack.
+This is a sample application shows how to use simple inputs and outputs on a
+Raspberry Pi.  There is a server side component that runs in Bluemix (Cloud Foundry) and
+a Python client that runs on a Raspberry Pi.
+
+The input is a simple button.  The output is a simple LED.  If you click on/off
+in the web UI in Bluemix it will turn a LED on/off.  If you press the button
+it will send a text message using Twilio to the phone number and message you
+type in the web ui.
 
 
 
@@ -13,7 +19,7 @@ To Use
 cf push myappname
 ```
 
-Replace myapp name with the name of your app (ex. hello-world)
+Replace myapp name with the name of your app (ex. python-raspberry-pi)
 
 or click the button below
 
