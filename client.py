@@ -32,7 +32,7 @@ try:
         GPIO.wait_for_edge(18, GPIO.FALLING)
         print "Button Pushed"
         myData = {'buttonPushed' : True}
-        client.publishEvent("raspberrypi", options["deviceId"], "input", myData)
+        client.publishEvent("raspberrypi", options["deviceId"], "input", "json", myData)
         time.sleep(0.2)
 
 except ibmiotf.ConnectionException  as e:
