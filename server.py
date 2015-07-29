@@ -57,7 +57,7 @@ def hello():
 def light_route(command):
     print command
     myData = {'command' : command}
-    client.publishEvent("raspberrypi", deviceId, "light", myData)
+    client.publishEvent("raspberrypi", deviceId, "light", "json", myData)
     return redirect("/", code=302)
 
 @app.route('/phoneNumber', methods=['POST'])
