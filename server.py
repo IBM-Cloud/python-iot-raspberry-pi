@@ -22,7 +22,8 @@ def myCommandCallback(cmd):
     global phoneNumberTo
     global textMessage
 
-    buttonPushed = cmd.payload["d"]["buttonPushed"]
+    payload = json.loads(cmd.payload)
+    buttonPushed = payload["buttonPushed"]
     message = twilioClient.messages.create(to=phoneNumberTo, from_=phoneNumberFrom, body=textMessage)
     print buttonPushed
 try:
