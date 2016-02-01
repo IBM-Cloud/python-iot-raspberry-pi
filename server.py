@@ -69,7 +69,7 @@ def phone_number_route():
     textMessage =  request.form['message']
     if phoneNumber.startswith('+'):
         phoneNumberTo = phoneNumber
-    else
+    else:
         phoneNumberTo = "+1" + phoneNumber
 
     return redirect("/", code=302)
