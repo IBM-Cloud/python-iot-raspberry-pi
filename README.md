@@ -34,7 +34,7 @@ The file should look like the following
 [application]
 org=youriotorg
 id=yourdeviceid
-auth-method=apikey
+type=apikey
 auth-key=yourapikey
 auth-token=yourapitoken
 ```
