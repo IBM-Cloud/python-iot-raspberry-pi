@@ -45,8 +45,8 @@ except ibmiotf.ConnectionException as e:
 
 app = Flask(__name__)
 
-if os.getenv("VCAP_APP_PORT"):
-    port = int(os.getenv("VCAP_APP_PORT"))
+if os.getenv("PORT"):
+    port = int(os.getenv("PORT"))
 else:
     port = 8080
 
